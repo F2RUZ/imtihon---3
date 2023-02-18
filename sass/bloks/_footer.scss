@@ -1,0 +1,57 @@
+.footer {
+  display: flex;
+  gap: 200px;
+  margin-top: 150px;
+
+  &__item {
+    padding-top: 20px;
+  }
+  &__span {
+    @include FlexStyle;
+    gap: 20px;
+  }
+  &__social {
+    display: flex;
+    gap: 40px;
+    padding-top: 20px;
+  }
+  &__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+  }
+}
+path {
+  &:hover {
+    fill: aqua;
+    transition: all 0.5s ease;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .footer {
+    position: relative;
+    bottom: 50px;
+    gap: 30px;
+    align-items: center;
+    &__logo{
+      width: 110px;
+      height: 35px;
+    }
+    &__item {
+      width: 150px;
+    }
+    &__listtwo {
+      @include FlexStyle;
+      flex-direction: column-reverse;
+
+      justify-content: space-between;
+    }
+    &__listone {
+      position: absolute;
+      bottom: -100px;
+    }
+  }
+}

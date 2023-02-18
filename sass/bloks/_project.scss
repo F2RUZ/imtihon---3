@@ -1,0 +1,42 @@
+.project {
+  margin-top: 160px;
+  &__img {
+    width: 1170px;
+    height: 500px;
+  }
+  &__photo {
+    position: relative;
+    left: 350px;
+    top: 150px;
+  }
+  &__play {
+    display: none;
+  }
+  &__vedio {
+    display: none;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .project {
+    margin-top: -100px;
+    // background-image: url(../../rasmlar/respons.png);
+    background-repeat: no-repeat;
+
+    &__photo {
+      left: -90px;
+      top: 250px;
+    }
+    &__img {
+      display: none;
+    }
+    &__play {
+      display: none;
+      position: relative;
+      bottom: 80px;
+      left: 140px;
+    }
+    &__vedio {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.cash {
+  position: relative;
+
+  @include FlexStyle;
+  gap: 70px;
+  border-radius: 20px;
+  margin-top: 240px;
+  background: #f8f8f8;
+  &__left {
+    padding-left: 60px;
+  }
+
+  &__right {
+    padding: 140px 60px;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    color: $title-color;
+  }
+  &__btns {
+    margin-top: 50px;
+    display: flex;
+    gap: 15px;
+  }
+  &__play {
+    @include FlexStyle;
+
+    @include Btn;
+    &:hover {
+      background-color: #a9a9ed;
+      transition: all 0.5s ease;
+      color: #fff;
+      border: 0.5px solid #a9a9ed;
+    }
+  }
+  &__git {
+    font-size: 12px;
+  }
+  &__google {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  &__photo {
+    position: absolute;
+    left: -150px;
+    bottom: -50px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .cash {
+    flex-direction: column;
+    width: 330px;
+    margin-top: 150px;
+
+    &__left {
+      padding: 0;
+    }
+    &__right {
+      padding: 0;
+    }
+    &__title {
+      width: 330px;
+      font-size: 26px;
+      line-height: 36px;
+    }
+    &__img {
+      width: 300px;
+    }
+    &__photo {
+      display: none;
+      left: 0;
+      bottom: 0;
+    }
+    &__btns {
+      gap: 10px;
+    }
+    &__play {
+      width: 150px;
+      height: 50px;
+    }
+    &__google {
+      font-size: 18px;
+    }
+  }
+}

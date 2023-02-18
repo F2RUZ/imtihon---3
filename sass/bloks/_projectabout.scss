@@ -1,0 +1,77 @@
+.projectabout {
+  position: relative;
+  @include FlexStyle;
+  gap: 90px;
+  width: 1170px;
+  height: 500px;
+  margin-top: 250px;
+  background: #0f0f54;
+  border-radius: 20px;
+  &__card {
+    position: absolute;
+    top: 110px;
+    left: 220px;
+    width: 100px;
+    height: 100px;
+    border: 1px dashed rgb(61, 61, 65);
+  }
+  &__left {
+    width: 540px;
+    padding: 126px 52px;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+  }
+  &__text {
+    width: 540px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 34px;
+    padding-top: 30px;
+    color: #ffffff;
+  }
+  &__img {
+    width: 500px;
+    height: 780px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .projectabout {
+    flex-direction: column-reverse;
+    width: 330px;
+    height: 700px;
+    margin-top: 350px;
+
+    &__title {
+      width: 200px;
+      font-size: 26px;
+      line-height: 31px;
+    }
+    &__text {
+      width: 290px;
+      font-size: 16px;
+      line-height: 30px;
+    }
+    &__card {
+      display: none;
+    }
+    &__left {
+      width: 310px;
+      padding: 80px 22px;
+    }
+    &__img {
+      position: absolute;
+      left: 10px;
+      bottom: 400px;
+
+      width: 310px;
+      height: 520px;
+    }
+  }
+}

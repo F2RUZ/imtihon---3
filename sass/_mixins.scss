@@ -1,0 +1,15 @@
+@mixin FlexStyle() {
+  display: flex;
+  align-items: center;
+}
+@mixin Btn(){
+    gap: 10px;
+    width: 200px;
+    height: 60px;
+    padding: 10px 8px;
+    background-color: #fff;
+    color: #0f0f54;
+    border: 0.5px solid black;
+    border-radius: 8px;
+}
+

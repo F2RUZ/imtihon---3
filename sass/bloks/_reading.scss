@@ -1,0 +1,65 @@
+.reading {
+  position: relative;
+@include FlexStyle;
+  gap: 30px;
+  width: 1170px;
+  height: 500px;
+  margin-top: 200px;
+  background: #f9e0c7;
+  border-radius: 20px;
+  &__left {
+    width: 540px;
+    margin: 110px 60px;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: -0.01em;
+    color: $title-color;
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 34px;
+    color: $text-color;
+  }
+  &__photo {
+    position: absolute;
+    bottom: -150px;
+    right: 0;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .reading {
+    flex-direction: column-reverse;
+    gap: 0;
+    width: 330px;
+    height: 700px;
+    margin-top: 300px;
+    &__left {
+      width: 300px;
+    }
+
+    &__title {
+      width: 130px;
+      font-size: 26px;
+      line-height: 32px;
+    }
+    &__text {
+      width: 300px;
+      font-size: 16px;
+      line-height: 30px;
+    }
+    &__images {
+      width: 250px;
+    }
+    &__photo {
+      width: 60px;
+      bottom: -100px;
+      left: 0;
+    }
+  }
+}

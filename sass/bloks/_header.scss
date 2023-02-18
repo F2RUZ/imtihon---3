@@ -1,0 +1,104 @@
+.header {
+  background-image: url(../../rasmlar/abstractZver.png),
+    url(../../rasmlar/abstractOval.png);
+  background-repeat: no-repeat;
+  background-position: bottom right, bottom left;
+  &__navbar {
+    @include FlexStyle;
+    gap: 540px;
+  }
+  &__logo {
+    width: 140px;
+    height: 40px;
+  }
+
+  &__wrapper {
+    @include FlexStyle;
+    gap: 10px;
+  }
+  &__left {
+    width: 660px;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    letter-spacing: -0.02em;
+
+    color: $title-color;
+  }
+  &__text {
+    width: 650px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    padding-bottom: 60px;
+    color: $text-color;
+  }
+  &__btn {
+   @include FlexStyle;
+    justify-content: center;
+    width: 181px;
+    height: 60px;
+    background: #0f0f54;
+    border-radius: 8px;
+    &:hover {
+      background: #2f2f89;
+      transition: all 0.4s linear;
+    }
+    &:active {
+      background: #2121d9;
+      transition: all 0.4s linear;
+    }
+  }
+  &__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .header {
+    background-image: none;
+
+    &__navbar {
+      flex-direction: column;
+      gap: 0;
+      align-items: flex-start;
+    }
+    &__photo {
+      display: none;
+    }
+    &__wrapper {
+      flex-direction: column-reverse;
+    }
+    &__left {
+      max-width: 300px;
+    }
+    &__right {
+      background-image: url(../../rasmlar/abstractZver.png),
+        url(../../rasmlar/abstractOval.png);
+      background-repeat: no-repeat;
+      background-position: right, bottom left;
+    }
+    &__title {
+      font-size: 36px;
+      line-height: 43px;
+    }
+    &__text {
+      max-width: 300px;
+      font-size: 18px;
+      line-height: 32px;
+      padding-bottom: 30px;
+    }
+    &__btn {
+      width: 150px;
+    }
+    &__images {
+      max-width: 310px;
+    }
+  }
+}
